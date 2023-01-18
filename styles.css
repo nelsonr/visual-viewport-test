@@ -66,6 +66,7 @@ input {
     outline: 10px dotted orange;
     outline-offset: -10px;
     z-index: 2;
+    pointer-events: none;
 }
 
 .layout-viewport {
@@ -77,4 +78,5 @@ input {
     outline: 10px dashed lightblue;
     outline-offset: -10px;
     z-index: 1;
+    pointer-events: none;
 }
