@@ -4,6 +4,7 @@ function updateVisualViewportHeight(height) {
 
     const computedHeight = window.visualViewport.height;
     visualViewportEl.style.height = computedHeight + "px";
+    visualViewportEl.style.top = window.visualViewport.offsetTop;
 }
 
 function updateLayoutViewportHeight() {
