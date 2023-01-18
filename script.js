@@ -1,10 +1,12 @@
-function updateVisualViewportHeight(height) {
-    document.querySelector(".visual-viewport-height").textContent = height;
-    const visualViewportEl = document.querySelector(".visual-viewport");
+function updateVisualViewportHeight() {
+    const height = window.visualViewport.height;
+    const offsetTop = window.visualViewport.offsetTop;
 
-    const computedHeight = window.visualViewport.height;
-    visualViewportEl.style.height = computedHeight + "px";
-    visualViewportEl.style.top = window.visualViewport.offsetTop;
+    const visualViewportEl = document.querySelector(".visual-viewport");
+    visualViewportEl.style.height = height + "px";
+    visualViewportEl.style.top = offsetTop;
+
+    document.querySelector(".visual-viewport-height").textContent = height;
 }
 
 function updateLayoutViewportHeight() {
@@ -12,11 +14,9 @@ function updateLayoutViewportHeight() {
 }
 
 if (typeof window.visualViewport === "object") {
-    window.visualViewport.addEventListener("resize", function () {
-        updateVisualViewportHeight(window.visualViewport.height);
-    });
-
-    updateVisualViewportHeight(window.visualViewport.height);
+    window.visualViewport.addEventListener("resize", updateVisualViewportHeight);
+    window.visualViewport.addEventListener("scroll", updateVisualViewportHeight);
+    updateVisualViewportHeight();
 }
 
 updateLayoutViewportHeight();
