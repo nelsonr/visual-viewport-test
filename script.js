@@ -1,5 +1,9 @@
 function updateVisualViewportHeight(height) {
     document.querySelector(".visual-viewport-height").textContent = height;
+    const visualViewportEl = document.querySelector(".visual-viewport");
+
+    const computedHeight = window.visualViewport.height;
+    visualViewportEl.style.height = computedHeight + "px";
 }
 
 function updateLayoutViewportHeight() {
