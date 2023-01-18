@@ -1,5 +1,9 @@
 function updateVisualViewportHeight(height) {
-    document.querySelector(".viewport-height").textContent = height;
+    document.querySelector(".visual-viewport-height").textContent = height;
+}
+
+function updateLayoutViewportHeight() {
+    document.querySelector(".layout-viewport-height").textContent = document.documentElement.clientHeight;
 }
 
 if (typeof window.visualViewport === "object") {
@@ -9,3 +13,6 @@ if (typeof window.visualViewport === "object") {
 
     updateVisualViewportHeight(window.visualViewport.height);
 }
+
+updateLayoutViewportHeight();
+window.addEventListener("resize", updateLayoutViewportHeight);
