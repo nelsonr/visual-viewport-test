@@ -1,0 +1,9 @@
+{
+    "name": "Visual Viewport Test",
+    "short_name": "Visual Viewport Test",
+    "description": "Visual Viewport Test",
+    "display": "browser",
+    "background_color": "#ffffff",
+    "theme_color": "#007dc3",
+    "start_url": "/"
+}
