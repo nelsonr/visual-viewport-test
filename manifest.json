@@ -4,6 +4,5 @@
     "description": "Visual Viewport Test",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#007dc3",
     "start_url": "/visual-viewport-test"
 }
