@@ -48,11 +48,33 @@ input {
     position: fixed;
     left: 0;
     bottom: 0vh;
-    border: 4px dashed red;
     z-index: 2000;
     padding: 16px;
     width: 100%;
     text-align: center;
     font-size: 1.1em;
     background-color: rgba(255, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.visual-viewport {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    outline: 10px dotted orange;
+    outline-offset: -10px;
+    z-index: 2;
+}
+
+.layout-viewport {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    outline: 10px dashed lightblue;
+    outline-offset: -10px;
+    z-index: 1;
 }
